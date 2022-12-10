@@ -24,6 +24,10 @@ const CompanySchema = new mongoose.Schema({
 	},
 	xp: Number,
 	level: Number,
+	viewsCount: {
+		type: Number,
+		default: 0,
+	}
 }, {
 	timestamps: true,
 });
