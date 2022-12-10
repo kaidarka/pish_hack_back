@@ -1,9 +1,19 @@
 import mongoose from "mongoose";
 
 const CompanySchema = new mongoose.Schema({
-	companyId: String,
-	name: String,
-	description: String,
+	creator: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "User",
+		required: true,
+	},
+	name: {
+		type: String,
+		required: true,
+	},
+	description: {
+		type: String,
+		required: true,
+	},
 	tags: {
 		type: Array,
 		default: [],

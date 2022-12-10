@@ -6,9 +6,7 @@ const getParams = (params) => {
 	if (params.university) {
 		condition.university = params.university;
 	}
-	console.log(1)
 	if (params.skills) {
-		console.log(2)
 		condition.skills = { $all: params.skills.split(',')};
 	}
 	return condition;
@@ -29,15 +27,6 @@ export const getAll = async (req,res) => {
 
 
 export const getOne = async (req,res) => {
-	try {
-		const events = await StudentModel.find().exec();
-		res.json(events);
-	} catch (err) {
-		console.log(err);
-		res.status(500).json({
-			message: "Не удалось получить студентов",
-		});
-	}
 	try {
 		const studentId = req.params.id;
 
