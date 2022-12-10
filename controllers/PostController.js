@@ -1,4 +1,5 @@
 import PostModel from "../models/Post.js";
+// TODO delete
 
 export const getLastTags = async (req, res) => {
 	try {

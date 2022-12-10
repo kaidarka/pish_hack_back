@@ -1,5 +1,5 @@
 import CommentModel from "../models/Comment.js";
-
+// TODO delete
 export const getLastComments = async (req, res) => {
 	try {
 		const comments = await CommentModel.find().limit(5).populate("user").exec();

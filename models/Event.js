@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+// TODO delete
 
 const EventSchema = new mongoose.Schema({
 	name: {

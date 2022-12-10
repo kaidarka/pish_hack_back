@@ -14,7 +14,19 @@ const UserSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
-	awatarUrl: String,
+	role: {
+		type: String,
+		required: true,
+	},
+	studentCardId: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "studentCard",
+	},
+	companyCardId: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "companyCard",
+	},
+	avatarUrl: String,
 }, {
 	timestamps: true,
 });

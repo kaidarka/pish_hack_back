@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 import multer from "multer";
 import cors from "cors";
 
-import { checkAuth,  } from "./utils/index.js";
+import { checkAuth } from "./utils/index.js";
 import router from "./routes/index.js";
 
 mongoose
-	.connect("mongodb+srv://admin:admin@cluster0.pbjgpo9.mongodb.net/blog?retryWrites=true&w=majority")
+	.connect("mongodb+srv://admin:admin@cluster0.pbjgpo9.mongodb.net/pish?retryWrites=true&w=majority")
 	.then(() => console.log("DB ok"))
 	.catch((err) => console.log("DB error", err));
 

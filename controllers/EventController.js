@@ -1,4 +1,5 @@
 import EventModel from "../models/Event.js";
+// TODO delete
 
 export const getAll = async (req, res) => {
 	try {

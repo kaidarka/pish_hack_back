@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+// TODO delete
 const CommentSchema = new mongoose.Schema({
 	message: {
 		type: String,
