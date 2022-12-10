@@ -15,10 +15,8 @@ export const getLastTags = async (req, res) => {
 
 export const getAll = async (req, res) => {
 	try {
-		console.log(req.query)
 		const sort = req.query.sort;
-		const query = req.query
-		const posts = await PostModel.find(query).sort(sort).populate("user").exec();
+		const posts = await PostModel.find().sort(sort).populate("user").exec();
 		res.json(posts);
 	} catch (err) {
 		console.log(err);
