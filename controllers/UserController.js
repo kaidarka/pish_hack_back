@@ -14,6 +14,7 @@ export const register = async (req, res) => {
 			email: req.body.email,
 			fullName: req.body.fullName,
 			avatarUrl: req.body.avatarUrl,
+			role: req.body.role,
 			passwordHash: hash
 		});
 

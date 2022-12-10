@@ -5,12 +5,12 @@ const StudentSchema = new mongoose.Schema({
 	education: String,
 	course: String,
 	skills: {
-		type: mongoose.Schema.Types.ObjectId,
-		ref: "companyCard",
+		type: Array,
+		default: [],
 	},
 	language: {
-		type: mongoose.Schema.Types.ObjectId,
-		ref: "companyCard",
+		type: Array,
+		default: [],
 	},
 	cv: String,
 	tags: {
@@ -43,8 +43,11 @@ const StudentSchema = new mongoose.Schema({
 	fullName: {
 		type: String,
 		required: true
+	},
+	viewsCount: {
+		type: Number,
+		default: 0,
 	}
-
 }, {
 	timestamps: true,
 });
